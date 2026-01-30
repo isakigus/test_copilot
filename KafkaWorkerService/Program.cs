@@ -8,7 +8,6 @@ var kafkaSettings = builder.Configuration.GetSection("Kafka").Get<KafkaSettings>
     ?? throw new InvalidOperationException("Kafka settings not configured");
 
 builder.Services.AddKafka(kafka => kafka
-    .UseConsoleLog()
     .AddCluster(cluster => cluster
         .WithBrokers(new[] { kafkaSettings.BootstrapServers })
         .AddConsumer(consumer => consumer
