@@ -1,0 +1,12 @@
+*.swp
+*.swo
+*~
+.DS_Store
+bin/
+obj/
+.vs/
+.vscode/
+*.user
+*.suo
+.env
+mysql-data/

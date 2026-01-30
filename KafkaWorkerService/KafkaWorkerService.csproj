@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-KafkaWorkerService-43456010-673a-4deb-9da7-d24b421ee7e8</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.2" />
+    <PackageReference Include="KafkaFlow" Version="3.0.11" />
+    <PackageReference Include="KafkaFlow.Microsoft.DependencyInjection" Version="3.0.11" />
+    <PackageReference Include="KafkaFlow.Serializer.JsonCore" Version="3.0.11" />
+    <PackageReference Include="MySql.Data" Version="9.1.0" />
+  </ItemGroup>
+</Project>
