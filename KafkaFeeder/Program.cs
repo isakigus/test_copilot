@@ -3,6 +3,7 @@ using KafkaFlow;
 using KafkaFlow.Producers;
 using KafkaFlow.Serializer;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 
 var configuration = new ConfigurationBuilder()
     .SetBasePath(Directory.GetCurrentDirectory())
@@ -22,7 +23,7 @@ Console.WriteLine($"Topic: {topic}");
 Console.WriteLine($"Interval: {intervalSeconds} seconds");
 Console.WriteLine($"Messages per batch: {messagesPerBatch}");
 
-var services = new Microsoft.Extensions.DependencyInjection.ServiceCollection();
+var services = new ServiceCollection();
 
 services.AddKafka(kafka => kafka
     .AddCluster(cluster => cluster
